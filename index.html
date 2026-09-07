@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Brandon Gerbasi — Robotics AI, systems integration, and CS 499 Computer Science ePortfolio.">
+  <title>Brandon Gerbasi | Robotics AI & Systems Integration</title>
+  <style>
+    :root{
+      --bg:#0b1220;
+      --bg2:#111b2e;
+      --panel:#152238;
+      --panel2:#1b2a43;
+      --text:#edf4ff;
+      --muted:#a9b8cf;
+      --accent:#66a7ff;
+      --accent2:#7dd3fc;
+      --line:#29405f;
+      --good:#81d6a6;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+      --max:1160px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(102,167,255,.12), transparent 32rem),
+        linear-gradient(180deg,var(--bg),#0d1625 60%,#0a111d);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--accent2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{width:min(var(--max),calc(100% - 36px));margin:auto}
+    nav{
+      position:sticky;top:0;z-index:20;
+      background:rgba(11,18,32,.88);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner{
+      min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px;
+    }
+    .brand{font-weight:800;letter-spacing:.02em;color:white}
+    .links{display:flex;gap:18px;flex-wrap:wrap;font-size:.93rem}
+    .links a{color:#dbe7f8}
+    header{padding:94px 0 72px}
+    .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border:1px solid #35557d;border-radius:999px;
+      color:#cfe4ff;background:rgba(102,167,255,.08);font-size:.86rem;font-weight:700;
+    }
+    h1{
+      font-size:clamp(2.55rem,7vw,5.6rem);
+      line-height:.98;margin:22px 0 18px;letter-spacing:-.05em;max-width:1000px;
+    }
+    .lead{
+      max-width:850px;color:#c7d4e6;font-size:clamp(1.08rem,2vw,1.35rem);
+    }
+    .quote{
+      margin-top:28px;max-width:850px;padding-left:18px;border-left:3px solid var(--accent);
+      color:#dbe8f7;font-style:italic;
+    }
+    .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+    .btn{
+      display:inline-block;padding:11px 16px;border-radius:10px;font-weight:800;
+      border:1px solid #35557d;background:#173054;color:#fff;text-decoration:none;
+    }
+    .btn.secondary{background:transparent;color:#d8e7fa}
+    .btn:hover{text-decoration:none;transform:translateY(-1px)}
+    section{padding:66px 0}
+    .section-title{font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 8px;letter-spacing:-.025em}
+    .section-sub{margin:0 0 30px;color:var(--muted);max-width:840px}
+    .grid{display:grid;gap:18px}
+    .grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .card{
+      background:linear-gradient(180deg,var(--panel),#111c2f);
+      border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 8px}
+    .card p{color:#c7d4e6;margin:.45rem 0}
+    .kicker{color:var(--accent2);font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900}
+    .skills{display:flex;flex-wrap:wrap;gap:10px}
+    .chip{
+      padding:7px 10px;border:1px solid #344c6a;border-radius:999px;
+      background:#101c2e;color:#d8e5f6;font-size:.88rem;
+    }
+    .metrics{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:24px}
+    .metric{
+      border:1px solid #315173;background:#11233c;border-radius:14px;padding:16px;text-align:center
+    }
+    .metric strong{font-size:1.55rem;display:block;color:white}
+    .metric span{font-size:.8rem;color:var(--muted)}
+    .project-head{display:flex;justify-content:space-between;gap:16px;align-items:flex-start}
+    .status{font-size:.76rem;font-weight:900;color:#bff6d4;border:1px solid #37634a;padding:5px 8px;border-radius:999px}
+    ul.clean{margin:12px 0 0;padding-left:20px;color:#c9d6e8}
+    .capstone{
+      background:linear-gradient(135deg,rgba(102,167,255,.09),rgba(125,211,252,.05));
+      border-top:1px solid rgba(102,167,255,.22);border-bottom:1px solid rgba(102,167,255,.22)
+    }
+    .artifact{
+      display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:start
+    }
+    .artifact-label{
+      padding:18px;border-radius:14px;background:#10213a;border:1px solid #34577e
+    }
+    .artifact-label strong{display:block;font-size:1.15rem;margin-bottom:6px}
+    .plan{
+      border-left:3px solid var(--accent);padding-left:16px;margin-top:16px
+    }
+    footer{border-top:1px solid rgba(255,255,255,.08);padding:36px 0;color:var(--muted)}
+    .small{font-size:.9rem;color:var(--muted)}
+    @media(max-width:850px){
+      .grid-3,.grid-2,.metrics{grid-template-columns:1fr}
+      .artifact{grid-template-columns:1fr}
+      .links{display:none}
+      header{padding-top:68px}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Brandon Gerbasi</a>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#capstone">CS 499 ePortfolio</a>
+        <a href="#skills">Skills</a>
+      </div>
+    </div>
+  </nav>
+
+  <header id="top">
+    <div class="wrap">
+      <span class="badge">CS 499 Computer Science ePortfolio · Robotics AI & Systems Integration</span>
+      <h1>Bringing AI, software, sensors, compute, and hardware into complete working systems.</h1>
+      <p class="lead">
+        Computer Science B.S. candidate focused on robotics systems integration, physical AI,
+        autonomous systems, edge compute, and the engineering work required to move from
+        individual components to reliable operation.
+      </p>
+      <p class="quote">
+        “The part I enjoy most is final integration — taking AI, software, sensors, compute,
+        electronics, and hardware and bringing the complete machine to life.”
+      </p>
+      <div class="cta">
+        <a class="btn" href="#capstone">View CS 499 Capstone</a>
+        <a class="btn secondary" href="Brandon_Gerbasi_Robotics_AI_Systems_Integration_Portfolio.pdf">Open Portfolio PDF</a>
+        <a class="btn secondary" href="https://github.com/gerbasi117">GitHub Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <h2 class="section-title">About</h2>
+        <p class="section-sub">
+          My work crosses software, AI, Linux/GPU systems, robotics, sensors, electronics,
+          fabrication, and field integration. My current direction is physical AI, robotics
+          systems integration, edge autonomy, and sim-to-real deployment.
+        </p>
+        <div class="grid grid-3">
+          <div class="card">
+            <div class="kicker">AI & Learning</div>
+            <h3>Local AI systems</h3>
+            <p>Qwen3 local LLMs, PyTorch, speech AI, wake-word training, and reinforcement/imitation-learning foundations.</p>
+          </div>
+          <div class="card">
+            <div class="kicker">Robotics Software</div>
+            <h3>Software that touches hardware</h3>
+            <p>C++17, Python, ROS2, state estimation, telemetry, safety logic, OpenCV, and operator-facing tools.</p>
+          </div>
+          <div class="card">
+            <div class="kicker">Systems & Deployment</div>
+            <h3>Integration and reliability</h3>
+            <p>Linux, CUDA, systemd, authenticated APIs, multi-node health, automated testing, sensors, wiring, and hardware bring-up.</p>
+          </div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric"><strong>2</strong><span>Linux GPU nodes</span></div>
+          <div class="metric"><strong>30B</strong><span>local MoE AI core</span></div>
+          <div class="metric"><strong>32K</strong><span>validated context</span></div>
+          <div class="metric"><strong>19</strong><span>registered Otto tools</span></div>
+          <div class="metric"><strong>15</strong><span>automated tests</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2 class="section-title">Selected Projects</h2>
+        <p class="section-sub">
+          End-to-end projects emphasizing systems ownership, testing, safety, and integration.
+        </p>
+
+        <div class="grid grid-2">
+          <article class="card">
+            <div class="project-head">
+              <div>
+                <div class="kicker">Project 1</div>
+                <h3>Otto — Distributed Local AI & Robotics Assistant</h3>
+              </div>
+              <span class="status">Active</span>
+            </div>
+            <p>
+              Private, offline-first assistant designed to hear, reason, use tools, coordinate
+              across compute nodes, and safely interact with computers and future robotic systems.
+            </p>
+            <ul class="clean">
+              <li>Two-node architecture: RTX 3090 AI core + RTX 3060 speech worker.</li>
+              <li>Authenticated STT service, modular LLM/STT/TTS/memory/tool services, and confirmation gates.</li>
+              <li>19-tool registry, bounded tool loops, atomic state, service recovery, and automated validation.</li>
+              <li>Local Qwen3 inference, faster-whisper, Piper TTS, CUDA optimization, and systemd deployment.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="project-head">
+              <div>
+                <div class="kicker">Project 2</div>
+                <h3>Custom Field Robotics UAV Platform</h3>
+              </div>
+              <span class="status">In Development</span>
+            </div>
+            <p>
+              Custom aerial robotics platform integrating propulsion, flight control, telemetry,
+              sensing, edge compute, safety logic, and staged autonomy.
+            </p>
+            <ul class="clean">
+              <li>Custom CAD / 3D-printed airframe with carbon-fiber reinforcement and dual-6S power architecture.</li>
+              <li>Flight Core V2, GPS, ELRS control, telemetry, mission/log workflow, and Python ground tools.</li>
+              <li>LiDAR, range sensing, thermal imaging, and Jetson Orin Nano staged for ROS2/OpenCV autonomy work.</li>
+              <li>Built around repeatable testing, failure analysis, operator warnings, and real-world integration.</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="grid grid-3" style="margin-top:18px">
+          <div class="card"><h3>C++ Robot State Estimator</h3><p>C++17, CMake, GTest; position, heading, velocity, GPS-loss handling, confidence scoring, and repeatable reports.</p></div>
+          <div class="card"><h3>ROS2 Perception & Safety Demo</h3><p>ROS2 Jazzy / C++; range sensing, IMU input, safety control, logging, and explicit safe-state behavior.</p></div>
+          <div class="card"><h3>Vision-Based Object Tracker</h3><p>Python / OpenCV real-time tracking foundation for future UAV and robotics autonomy.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="capstone" id="capstone">
+      <div class="wrap">
+        <div class="kicker">Southern New Hampshire University</div>
+        <h2 class="section-title">CS 499 Computer Science Capstone ePortfolio</h2>
+        <p class="section-sub">
+          This section documents my growth across software engineering and design, algorithms and
+          data structures, and databases. The Module One artifact is an existing C++ investment-company
+          application from CS 410 that will be enhanced throughout the capstone.
+        </p>
+
+        <div class="artifact">
+          <div class="artifact-label">
+            <strong>Selected Artifact</strong>
+            CS 410 C++ Investment Company Application
+            <p class="small">Original source code used as the starting point for all three enhancement categories.</p>
+            <a href="CS499_Project2_Original.cpp">View original C++ artifact</a>
+          </div>
+
+          <div>
+            <div class="card">
+              <div class="kicker">Category One</div>
+              <h3>Software Engineering & Design</h3>
+              <p>
+                Refactor the program into a modular object-oriented architecture with separated
+                responsibilities for authentication, client management, input validation, and persistence.
+              </p>
+              <div class="plan"><strong>Goal:</strong> improve maintainability, testability, security boundaries, and professional software structure.</div>
+            </div>
+
+            <div class="card" style="margin-top:14px">
+              <div class="kicker">Category Two</div>
+              <h3>Algorithms & Data Structures</h3>
+              <p>
+                Expand the application with unique client identifiers, hash-based lookup, searching,
+                sorting, filtering, and documented trade-offs between data structures and operations.
+              </p>
+              <div class="plan"><strong>Goal:</strong> demonstrate algorithmic reasoning, complexity analysis, and efficient data access.</div>
+            </div>
+
+            <div class="card" style="margin-top:14px">
+              <div class="kicker">Category Three</div>
+              <h3>Databases</h3>
+              <p>
+                Replace temporary in-memory client storage with persistent SQLite data, prepared
+                statements, constraints, transactions, user records, and an audit trail.
+              </p>
+              <div class="plan"><strong>Goal:</strong> demonstrate secure persistent data design, database integration, validation, and reliability.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:22px">
+          <h3>Capstone Course Outcomes</h3>
+          <p>
+            The completed ePortfolio will demonstrate professional communication, collaborative and
+            stakeholder-aware engineering, algorithmic problem solving, industry-relevant computing
+            practices, and a security mindset applied across software architecture and data.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrap">
+        <h2 class="section-title">Technical Focus</h2>
+        <p class="section-sub">Technologies and capabilities represented across the portfolio.</p>
+        <div class="skills">
+          <span class="chip">C++17</span><span class="chip">Python</span><span class="chip">ROS2</span>
+          <span class="chip">Linux</span><span class="chip">CUDA</span><span class="chip">PyTorch</span>
+          <span class="chip">OpenCV</span><span class="chip">CMake</span><span class="chip">GTest</span>
+          <span class="chip">Git / GitHub</span><span class="chip">SQL / SQLite</span><span class="chip">MongoDB</span>
+          <span class="chip">REST APIs</span><span class="chip">Systemd</span><span class="chip">NVIDIA / Jetson</span>
+          <span class="chip">Telemetry</span><span class="chip">Sensors</span><span class="chip">State Estimation</span>
+          <span class="chip">Safety Logic</span><span class="chip">Systems Integration</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <strong>Brandon Gerbasi</strong> · Robotics AI & Systems Integration<br>
+      <span class="small">Computer Science ePortfolio · CS 499 Capstone</span><br><br>
+      <a href="https://github.com/gerbasi117">github.com/gerbasi117</a>
+      &nbsp;·&nbsp;
+      <a href="mailto:brandon.gerbasi@gmail.com">brandon.gerbasi@gmail.com</a>
+    </div>
+  </footer>
+</body>
+</html>
