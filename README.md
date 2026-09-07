@@ -1,4 +1,4 @@
-# Brandon Gerbasi — GitHub Pages Portfolio
+# Brandon Gerbasi - GitHub Pages Portfolio
 
 This repository hosts my professional Robotics AI & Systems Integration portfolio and my
 CS 499 Computer Science Capstone ePortfolio.
