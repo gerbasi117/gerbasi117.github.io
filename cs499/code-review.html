@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+  <meta
+    name="description"
+    content="CS 499 code review of the original C++ artifact."
+  >
+
+  <title>Code Review | Brandon Gerbasi</title>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav>
+    <div class="wrap nav">
+      <a class="brand" href="index.html">
+        Brandon Gerbasi
+      </a>
+
+      <div class="links">
+        <a href="index.html">Self-Assessment</a>
+        <a href="code-review.html">Code Review</a>
+        <a href="software-design.html">Software Design</a>
+        <a href="algorithms.html">Algorithms</a>
+        <a href="databases.html">Databases</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="eyebrow">Milestone One</div>
+
+      <h1>Informal Code Review</h1>
+
+      <p class="lead">
+        Review of the original CS 410 C++ artifact, its existing
+        functionality, weaknesses, and the three planned enhancements.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <div class="wrap">
+        <div class="video-wrapper">
+          <iframe
+            src="https://www.youtube.com/embed/uidjFYwjPO8"
+            title="CS 499 Code Review - Brandon Gerbasi"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+
+        <div class="downloads">
+          <a
+            class="btn"
+            href="https://youtu.be/uidjFYwjPO8"
+            target="_blank"
+            rel="noopener"
+          >
+            Open Code Review on YouTube
+          </a>
+
+          <a
+            class="btn secondary"
+            href="downloads/CS499_Project2_Original.cpp"
+          >
+            View Original C++ Artifact
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Existing Functionality</div>
+
+        <h2>Original Artifact</h2>
+
+        <p>
+          The original artifact is a C++ investment-company
+          client-service application created in CS 410: Reverse
+          Software Engineering. It authenticates a user, limits
+          failed login attempts, validates numeric input, displays
+          client records, and allows an authorized user to change a
+          client’s selected service.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Code Analysis</div>
+
+        <h2>Areas for Improvement</h2>
+
+        <p>
+          The original application stores all functionality in one
+          source file. Client data, authentication, input validation,
+          menu control, display logic, and update logic are closely
+          connected. Clients are identified by their position in a
+          vector, and all records are recreated from hardcoded values
+          each time the program starts.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Enhancement Plan</div>
+
+        <h2>Three Enhancement Categories</h2>
+
+        <h3>Software Design and Engineering</h3>
+
+        <p>
+          Refactor the procedural single-file program into focused
+          classes for client data, input validation, authentication,
+          client management, and application control.
+        </p>
+
+        <h3>Algorithms and Data Structures</h3>
+
+        <p>
+          Add stable client IDs, unordered-map lookup, sorting,
+          filtering, and clear analysis of the trade-offs between
+          direct lookup and ordered presentation.
+        </p>
+
+        <h3>Databases</h3>
+
+        <p>
+          Add SQLite persistence for users, clients, and audit
+          history using prepared statements, constraints, foreign
+          keys, transactions, and rollback handling.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>
+        Brandon Gerbasi — CS 499 Computer Science Capstone
+      </p>
+    </div>
+  </footer>
+</body>
+</html>
