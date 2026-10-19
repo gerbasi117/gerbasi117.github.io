@@ -1,13 +1,22 @@
-# Brandon Gerbasi - GitHub Pages Portfolio
+# Brandon Gerbasi — Robotics Systems Integration Portfolio
 
-This repository hosts my professional Robotics AI & Systems Integration portfolio and my
-CS 499 Computer Science Capstone ePortfolio.
+This repository hosts my professional robotics systems-integration
+portfolio and completed CS 499 Computer Science Capstone ePortfolio.
 
-## Main site
+## Main professional portfolio
+
 https://gerbasi117.github.io/
 
-## CS 499
-The site includes the initial CS 499 artifact and enhancement plan for:
-- Software Engineering and Design
-- Algorithms and Data Structures
-- Databases
+## CS 499 final ePortfolio
+
+https://gerbasi117.github.io/cs499/
+
+The final capstone includes:
+
+- Code-review video
+- Original CS 410 artifact
+- Software Design and Engineering enhancement
+- Algorithms and Data Structures enhancement
+- Database enhancement
+- Three enhancement narratives
+- Professional self-assessment
